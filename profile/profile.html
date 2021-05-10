@@ -451,7 +451,7 @@
                                                     <div style="display: inline;" class="w-5/6 p-2 text-center">
                                                         <div class="input_fields_wrap">
                                                         
-                                                            <div><input style="display: none;" class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" name="mytext[]"></div>
+                                                            <div><input style="display: none;" class="form-input rounded-md shadow-sm mt-1 block w-full"   type="text" name="mytext[]"></div>
                                                         </div>
                                                     </div>
                                                     <div class="w-1/6 pt-2 pl-2 pb-2 text-center">
@@ -468,10 +468,50 @@
                                         </div>
                                     </div>
                                     <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                        <button type="submit"
+                                        <button type="submit" onclick="walletValue()"
                                             class="inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 focus:outline-none focus:bg-blue-900 focus:shadow-outline-gray transition ease-in-out duration-150">
                                             Save
                                         </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block">
+                        <div class="py-8">
+                            <div class="border-t border-gray-200"></div>
+                        </div>
+                    </div>
+
+                    <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
+                        <div class="md:col-span-1">
+                            <div class="px-4 sm:px-0">
+                                <h3 class="text-lg font-medium text-gray-900">Your Wallet</h3>
+                                <p class="mt-1 text-sm text-gray-600">Tracked Wallet</p>
+                            </div>
+                        </div>
+                        <div class="mt-5 md:mt-0 md:col-span-2">
+                            <form>
+                                <div class="shadow overflow-hidden sm:rounded-md">
+                                    <div class="px-4 py-5 bg-white sm:p-6">
+                                        <div class="grid grid-cols-6 gap-6">
+                                            <div class="col-span-9">
+                                                <div class="flex mb-4">
+
+                                                    <h3 class="text-lg font-medium text-gray-900">
+                                                        Your Tracked Wallet
+                                                    </h3>
+                                                    
+
+
+                                                 
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                                       
                                     </div>
                                 </div>
                             </form>
@@ -662,7 +702,7 @@
                             Please enter your password to confirm you would like to logout of your other browser
                             sessions across all of your devices.
 
-                            <div class="mt-4"><input class="form-input rounded-md shadow-sm mt-1 block w-3/4"
+                            <div class="mt-4"><input class="form-input  rounded-md shadow-sm mt-1 block w-3/4"
                                     type="password" placeholder="Password">
                                 <div class="mt-2" style="display: none;">
                                     <p class="text-sm text-blue-600">
@@ -795,6 +835,14 @@
         gtag('config', 'G-21RSP2T54D');
     </script>
     <script src="../js/main.js"></script>
+
+    <script>
+        function walletValue()
+{
+var input = document.getElementsByClassName("userInput").value;
+alert(input);
+}
+    </script>
     <script>$(document).ready(function() {
         var max_fields      = 10; //maximum input boxes allowed
         var wrapper   		= $(".input_fields_wrap"); //Fields wrapper
@@ -805,7 +853,7 @@
             e.preventDefault();
             if(x < max_fields){ //max input box allowed
                 x++; //text box increment
-                $(wrapper).append('<div ><input type="text" placeholder="hnt wallet address" class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" name="mytext[]"/><button href="#" class="remove_field float-right inline-flex items-center px-4 mt-1 mb-1 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 active:bg-green-900 focus:outline-none focus:border-green-900 focus:shadow-outline-gray transition ease-in-out duration-150">Remove</button></div>'); //add input box
+                $(wrapper).append('<div ><input type="text"  placeholder="hnt wallet address" class="form-input userInput rounded-md shadow-sm mt-1 block w-full" type="text" name="mytext[]"/><button href="#" class="remove_field float-right inline-flex items-center px-4 mt-1 mb-1 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 active:bg-green-900 focus:outline-none focus:border-green-900 focus:shadow-outline-gray transition ease-in-out duration-150">Remove</button></div>'); //add input box
             }
         });
         
