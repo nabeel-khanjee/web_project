@@ -1,81 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="wbwkkJ0iUs4pBkZgYYf33pG3IwX9fT3JfZiZbgBa">
 
-        <title>Hotspotty</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="wbwkkJ0iUs4pBkZgYYf33pG3IwX9fT3JfZiZbgBa">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <title>Hotspotty</title>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="https://hotspotty.net/css/app.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
-    </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased">
-            <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-    <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Eo_circle_blue_letter-h.svg/512px-Eo_circle_blue_letter-h.svg.png" alt="Hotspotty" style="max-width: 100px">
-    </div>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://hotspotty.net/css/app.css">
 
-    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        <form method="POST" action="https://hotspotty.net/register">
-            <input type="hidden" name="_token" value="wbwkkJ0iUs4pBkZgYYf33pG3IwX9fT3JfZiZbgBa">
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
+</head>
+
+<body>
+    <div class="font-sans text-gray-900 antialiased">
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
             <div>
-                 <label class="block font-medium text-sm text-gray-700" for="name">
-    Name
-</label>
- 
-                 <input  class="form-input rounded-md shadow-sm block mt-1 w-full" id="name" type="text" name="name" requiblue="requiblue" autofocus="autofocus" autocomplete="name">
- 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Eo_circle_blue_letter-h.svg/512px-Eo_circle_blue_letter-h.svg.png"
+                    alt="Hotspotty" style="max-width: 100px">
             </div>
 
-            <div class="mt-4">
-                 <label class="block font-medium text-sm text-gray-700" for="email">
-    Email
-</label>
- 
-                 <input  class="form-input rounded-md shadow-sm block mt-1 w-full" id="email" type="email" name="email" requiblue="requiblue">
- 
-            </div>
+            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+                <form method="POST" action="https://hotspotty.net/register">
+                    <input type="hidden" name="_token" value="wbwkkJ0iUs4pBkZgYYf33pG3IwX9fT3JfZiZbgBa">
+                    <div>
+                        <label class="block font-medium text-sm text-gray-700" for="name">
+                            Name
+                        </label>
 
-            <div class="mt-4">
-                 <label class="block font-medium text-sm text-gray-700" for="password">
-    Password
-</label>
- 
-                 <input  class="form-input rounded-md shadow-sm block mt-1 w-full" id="password" type="password" name="password" requiblue="requiblue" autocomplete="new-password">
- 
-            </div>
+                        <input class="form-input rounded-md shadow-sm block mt-1 w-full" id="name" type="text"
+                            name="name" requiblue="requiblue" autofocus="autofocus" autocomplete="name">
 
-            <div class="mt-4">
-                 <label class="block font-medium text-sm text-gray-700" for="password_confirmation">
-    Confirm Password
-</label>
- 
-                 <input  class="form-input rounded-md shadow-sm block mt-1 w-full" id="password_confirmation" type="password" name="password_confirmation" requiblue="requiblue" autocomplete="new-password">
- 
-            </div>
+                    </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="../login/login.html">
-                    Already registered?
-                </a>
+                    <div class="mt-4">
+                        <label class="block font-medium text-sm text-gray-700" for="email">
+                            Email
+                        </label>
 
-                <button type="submit" class="inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 focus:outline-none focus:border-blue-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 ml-4">
-                    Register
-                </button>
+                        <input class="form-input rounded-md shadow-sm block mt-1 w-full" id="email" type="email"
+                            name="email" requiblue="requiblue">
+
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block font-medium text-sm text-gray-700" for="password">
+                            Password
+                        </label>
+
+                        <input class="form-input rounded-md shadow-sm block mt-1 w-full" id="password" type="password"
+                            name="password" requiblue="requiblue" autocomplete="new-password">
+
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block font-medium text-sm text-gray-700" for="password_confirmation">
+                            Confirm Password
+                        </label>
+
+                        <input class="form-input rounded-md shadow-sm block mt-1 w-full" id="password_confirmation"
+                            type="password" name="password_confirmation" requiblue="requiblue"
+                            autocomplete="new-password">
+
+                    </div>
+
+                    <div class="flex items-center justify-end mt-4">
+                        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="../login/login.html">
+                            Already registered?
+                        </a>
+
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 focus:outline-none focus:border-blue-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150 ml-4">
+                            Register
+                        </button>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-</div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
- 
