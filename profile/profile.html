@@ -443,11 +443,26 @@
                                         <div class="grid grid-cols-6 gap-6">
                                             <div class="col-span-9">
                                                 <div class="flex mb-4">
-                                                    <div class="w-5/6 p-2 text-center"></div>
-                                                    <div class="w-1/6 pt-2 pl-2 pb-2 text-center"><button type="button"
-                                                            class="float-right inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-vlue-900 focus:outline-none focus:border-blue-900 focus:shadow-outline-gray transition ease-in-out duration-150">
+
+
+                                                    
+
+
+                                                    <div class="w-5/6 p-2 text-center">
+                                                        <div class="input_fields_wrap">
+                                                        
+                                                            <div><input style="display: none;" class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" name="mytext[]"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="w-1/6 pt-2 pl-2 pb-2 text-center">
+                                                        <button    type="button"
+                                                            class="add_field_button float-right inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-vlue-900 focus:outline-none focus:border-blue-900 focus:shadow-outline-gray transition ease-in-out duration-150">
                                                             add
-                                                        </button></div>
+                                                        </button>
+                                                        
+                                                        
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -769,6 +784,7 @@
     </div>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-21RSP2T54D"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
     <script>
@@ -779,6 +795,24 @@
         gtag('config', 'G-21RSP2T54D');
     </script>
     <script src="../js/main.js"></script>
+    <script>$(document).ready(function() {
+        var max_fields      = 10; //maximum input boxes allowed
+        var wrapper   		= $(".input_fields_wrap"); //Fields wrapper
+        var add_button      = $(".add_field_button"); //Add button ID
+        
+        var x = 1; //initlal text box count
+        $(add_button).click(function(e){ //on add input button click
+            e.preventDefault();
+            if(x < max_fields){ //max input box allowed
+                x++; //text box increment
+                $(wrapper).append('<div class=""><input placeholder="hnt wallet address" class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" name="mytext[]"/></div>'); //add input box
+            }
+        });
+        
+        $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+            e.preventDefault(); $(this).parent('div').remove(); x--;
+        })
+    });</script>
 
 </body>
 
