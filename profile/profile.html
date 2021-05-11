@@ -1366,7 +1366,14 @@
                                                     <div style="display: inline;" class="w-5/6 p-2 text-center">
                                                         <div class="input_fields_wrap">
 
-                                                            <div><input style="display: none;" class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" name="mytext[]"></div>
+                                                            <div>
+                                                                <form action="">
+                                                                    <input style="display: none;" class="form-input rounded-md shadow-sm mt-1 block w-full" type="text" name="mytext[]">
+                                                                </form>
+
+
+
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="w-1/6 pt-2 pl-2 pb-2 text-center">
@@ -1732,7 +1739,8 @@
                 e.preventDefault();
                 if (x < max_fields) { //max input box allowed
                     x++; //text box increment
-                    $(wrapper).append('<div ><input type="text"  placeholder="hnt wallet address" class="form-input userInput rounded-md shadow-sm mt-1 block w-full" type="text" name="mytext[]"/><button href="#" class="remove_field float-right inline-flex items-center px-4 mt-1 mb-1 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 active:bg-green-900 focus:outline-none focus:border-green-900 focus:shadow-outline-gray transition ease-in-out duration-150">Remove</button></div>'); //add input box
+                    $(wrapper).append('<div ><form action=""> <input style = "display: none;"class = "form-input rounded-md shadow-sm mt-1 block w-full"type = "text"name = "mytext[]" > </form><button href="#" class="remove_field float-right inline-flex items-center px-4 mt-1 mb-1 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 active:bg-green-900 focus:outline-none focus:border-green-900 focus:shadow-outline-gray transition ease-in-out duration-150">Remove</button > < /div>');
+
                 }
             });
 
