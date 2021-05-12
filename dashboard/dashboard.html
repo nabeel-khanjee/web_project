@@ -1253,8 +1253,11 @@
                                     Welcome to your Helium Hotspots Manager!
                                 </div>
                             </div>
+
                             <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
+
                                 <div class="p-6">
+
                                     <div class="flex items-center"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
@@ -1311,6 +1314,14 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="ml-4 mt-12  text-lg text-gray-600 leading-7 font-semibold">
+                                        <a href="#">Your Hotspots</a>
+                                    </div>
+                                    <div class="pb-10 mt-2 text-sm text-gray-500 bg-white rounded-lg shadow-xl pl-4 pr-4 pt-2   p-6 mt-3 mb-10 sm:px-20 bg-white border-b border-gray-200">
+
+                                        <!-- Hotspot Area -->
+
+                                    </div>
                                     <div class="flex items-center mt-10">
                                         <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"></div>
                                     </div>
@@ -1346,17 +1357,29 @@
 
 
 
-                                    <div class="mt-2 text-sm text-gray-500 bg-white rounded-lg shadow-xl">
-                                        <canvas id="lineChart" width="500" height="275" class="chartjs-render-monitor" style="display: block; height: 250px; width: 400px;"></canvas>
-
+                                    <div>
+                                        <div class="mt-2 text-sm text-gray-500 bg-white rounded-lg shadow-xl pl-4 pr-4  pb-24" style="padding-bottom: 150px;">
+                                            <a href="https://explorer.helium.com/accounts/131dktL2q2qpBPKh3bf7ncAKWDjg7dq2ajvYgDrGJwiktVqfkua" target="_blank" class="hover:text-blue-800">
+                                                <div class="grid grid-cols-2 gap-4">
+                                                    <div class="text-2xl font-bold">💸 395115.22 HNT</div>
+                                                    <div class="text-sm text-right pt-3"><span class="inline-block  align-text-bottom"> </span></div>
+                                                </div>
+                                                <p class="text-xs text-right">131dktL2q2qpBPKh3bf7ncAKWDjg7dq2ajvYgDrGJwiktVqfkua</p>
+                                                <div class="" style="height: 200px;">
+                                                    <div class="chartjs-size-monitor">
+                                                        <div class="chartjs-size-monitor-expand">
+                                                            <div class=""></div>
+                                                        </div>
+                                                        <div class="chartjs-size-monitor-shrink">
+                                                            <div class=""></div>
+                                                        </div>
+                                                    </div><canvas id="lineChart" width="383" height="220" style="display: block; height: 200px; width: 349px;" class="chartjs-render-monitor"></canvas></div>
+                                            </a>
+                                        </div>
                                     </div>
 
                                     <div>
-                                        <div class="p-4">
-                                            You are currently not following any wallets. Go to
-                                            <b><a href="../profile/profile.html"
-                                                        class="hover:text-blue-800">Profile</a></b> to add new wallet addresses.
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -1480,10 +1503,15 @@
         var barChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', '21-05-11', ],
+                labels: ['21-05-11', '21-05-11'],
                 datasets: [{
+                    fill: {
+                        target: 'origin',
+                        above: 'rgb(54, 162, 235, 0.2)', // Area will be red above the origin
+                        below: 'rgb(54, 162, 235, 0.2)' // And blue below the origin
+                    },
                     label: 'Wallet Rewards',
-                    data: [32, 49, 35, 55, 25, 35, 52, 15, 53, 55, 25, 35, 15, 59, 53, 55, 25, 35, 15, 59, 53, 55, 62, 36, 62, 69, 43, 35, 22, 31, 14, 41, 43, 53, 22, 43],
+                    data: [3200, 4900],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.2)',
 
@@ -1497,6 +1525,7 @@
                 }]
             },
             options: {
+
                 scales: {
                     y: {
                         stacked: true
@@ -1506,6 +1535,10 @@
         });
     </script>
 </body>
+
+</html>
+
+</html>
 
 </html>
 
